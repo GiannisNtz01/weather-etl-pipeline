@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  etl:
+    build: .
+    container_name: weather_etl
+    volumes:
+      - .:/app   # για να βλέπεις τα αρχεία τοπικά
+    restart: unless-stopped
